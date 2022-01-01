@@ -1,0 +1,89 @@
+<html>
+ 
+<head>
+      <title> Avatar Generator  </title>
+
+      <script>
+        window.onload=function()
+        {
+     // HEAD       
+    var cyborghead = new Image();
+    var cyborgheadnum = Math.floor(Math.random()*#ofheads)+1;
+    var cyborgheadname="head" + cyborgheadnum + ".png";
+  cyborghead.src=cyborgheadname;
+  // EYES       
+  var cyborgeyes = new Image();
+    var cyborgeyesnum = Math.floor(Math.random()*#ofheads)+1;
+    var cyborgeyesname="head" + cyborgheadnum + ".png";
+  cyborgeyes.src=cyborgeyesname;
+//HEAD LOADED
+  cyborghead.onload=function()
+  {
+    buildrobot();
+  }
+//Eyes LOADED
+cyborgeyes.onload=function()
+  {
+    buildrobot();
+  }
+function buildrobot()
+{
+  var canvas = getElementById('canvas')
+  var ctx = canvas.getContext('2d')
+  canvas.width=400;
+  canvas.height=400;
+  //DRAW HEAD
+  ctx.drawImage(cyborghead,((400-cyborghead.width)/2),50); 
+  //DRAW EYES
+  ctx.drawImage(cyborghead,((400-cyborgeyes.width)/2),100);
+}
+        }
+</script>
+
+</head>
+
+<body>
+    <div align = "center">
+    <canvas id= "canvas" style ="border:5px solid #000000;"></canvas>
+    <br><br>
+    <button onclick="window.location.reload();">GET A CYBORG</button>
+
+
+    </div>
+
+
+
+
+</body>
+
+
+
+
+          
+        
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
